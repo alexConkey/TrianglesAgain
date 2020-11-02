@@ -18,4 +18,19 @@ public class Triangle {
     double semiPerimeter = getPerimeter()/2;
     return Math.sqrt(semiPerimeter*(semiPerimeter-v1.distanceTo(v2))*(semiPerimeter-v1.distanceTo(v3))*(semiPerimeter-v2.distanceTo(v3)));
   }
+  public String classify(){
+    if (Math.round(v1.distanceTo(v2)*10000.0)/10000.0 == Math.round(v2.distanceTo(v3)*10000.0)/10000.0){
+      if (Math.round(v1.distanceTo(v2)*10000.0)/10000.0 == Math.round(v1.distanceTo(v3)*10000.0)/10000.0){
+        return "equilateral";
+      }else{
+        return "isosceles";
+      }
+    }else if (Math.round(v1.distanceTo(v2)*10000.0)/10000.0 == Math.round(v1.distanceTo(v3)*10000.0)/10000.0){
+      return "isosceles";
+    }else if (Math.round(v3.distanceTo(v2)*10000.0)/10000.0 == Math.round(v1.distanceTo(v3)*10000.0)/10000.0){
+      return "isosceles";
+    }else{
+      return "scalene";
+    }
+  }
 }
