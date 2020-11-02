@@ -7,5 +7,8 @@ public class PointTester {
     System.out.println(myPoint.equals(myPoint2));
     System.out.println(myTriangle.getPerimeter());
     System.out.println(myTriangle.getArea());
+    System.out.println(myTriangle.classify());
+    System.out.println(myTriangle.toString());
+
   }
 }
