@@ -44,4 +44,5 @@ public class Triangle {
     }if (index == 2){
       v3 = newP;
     }
+  }
 }
